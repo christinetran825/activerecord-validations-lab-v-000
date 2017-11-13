@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
 
 
   def is_clickbait?
-    unless title=nil
+    unless title==nil
       if CLICKBAIT_LISTS.none? { |phrase| title.include?(phrase)}
         errors.add(:title, "Should Be Clickbait")
       end
