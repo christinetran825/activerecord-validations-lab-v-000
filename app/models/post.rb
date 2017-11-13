@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
-  validates :phone_number, length: { is: 10 }
+  validates :content, presence: true, uniqueness: true
+  validates :summary, presence: true, uniqueness: true
+  validates :category, presence: true, uniqueness: true
 end
 
 title: "You Won't Believe These True Facts",
